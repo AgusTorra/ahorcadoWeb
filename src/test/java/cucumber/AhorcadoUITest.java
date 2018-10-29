@@ -10,6 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import main.java.Ahorcado;
 import main.java.Jugador;
@@ -28,11 +30,14 @@ public class AhorcadoUITest {
     public void setUp() throws Throwable {
     	System.setProperty("webdriver.gecko.driver","C:\\Users\\Agustin\\eclipse-workspace\\ahorcado\\driver\\geckodriver.exe");
 		
-		FirefoxOptions options = new FirefoxOptions();
-		options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe"); //This is the location where you have installed Firefox on your machine
- 
-		driver = new FirefoxDriver(options);
+		//FirefoxOptions options = new FirefoxOptions();
+		//options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe"); //This is the location where you have installed Firefox on your machine
+ 		
+		//driver = new FirefoxDriver(options);
+		driver = new RemoteWebDriver(new URL("http://localhost:8080/ahorcado/index.html"), DesiredCapabilities.firefox());
 		driver.get("http://localhost:8080/ahorcado/index.html");		
+		
+		
     }
     
     @Given("^Comienza el juego$")
