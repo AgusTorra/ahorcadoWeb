@@ -54,8 +54,8 @@
 	</dependency>
   </dependencies>
   
-  <build>
-    <sourceTestDirectory>src/main/java</sourceTestDirectory>
+  <build>	  
+    <testSourceDirectory>src/main/test</testSourceDirectory>
     <!--<resources>
       <resource>
         <directory>src</directory>
