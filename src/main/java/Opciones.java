@@ -13,17 +13,17 @@ public class Opciones {
         return dificultad;
     }
 
-    public static void setDificultad(String dificultad) {
+    /*public static void setDificultad(String dificultad) {
         Opciones.dificultad = dificultad;
-    }
+    }*/
 
     public static String getTematica() {
         return tematica;
     }
 
-    public static void setTematica(String tematica) {
+    /*public static void setTematica(String tematica) {
         Opciones.tematica = tematica;
-    }
+    }*/
 
     public static String getIdioma() {
         return idioma;

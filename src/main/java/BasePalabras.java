@@ -27,7 +27,7 @@ public class BasePalabras {
         while (!base.get(n).getIdioma().equals(idioma) ||
                !base.get(n).getTematica().equals(tematica) ||
                !base.get(n).getDificultad().equals(dificultad)) {
-            n = rand.nextInt(cantPalabras);
+            //n = rand.nextInt(cantPalabras);
         }
         return palabra = base.get(n);
     }

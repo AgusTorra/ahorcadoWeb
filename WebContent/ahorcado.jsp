@@ -17,10 +17,8 @@
 	<p id="estado">Estado:
 		<%=estado %>
 	</p>
-	<p>Intentos restantes:
-		<%=err %> de 6</p>
-	<p>Palabra a descubrir: <span>
-			<%=pal %></span></p>
+	<p>Intentos restantes: <%=err %> de 6</p>
+	<p>Palabra a descubrir: <%=pal %></p>
 	<form action=/ahorcado/ahorcadoServlet method="post">
 		<input name="letra" type="text" placeholder="Ingresa una letra...">
 		<input name="intentar" type="submit" value="Intentar">

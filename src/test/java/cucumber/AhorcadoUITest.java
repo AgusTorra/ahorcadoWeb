@@ -28,15 +28,14 @@ public class AhorcadoUITest {
 
     @Before
     public void setUp() throws Throwable {
-    	System.setProperty("webdriver.gecko.driver","/ahorcado/driver/geckodriver.exe");
+    	System.setProperty("webdriver.gecko.driver","C:\\Users\\Agustin\\eclipse-workspace\\ahorcado\\driver\\geckodriver.exe");
 		
-		//FirefoxOptions options = ;
-		//options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe"); //This is the location where you have installed Firefox on your machine
+		FirefoxOptions options = new FirefoxOptions();
+		options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe"); //This is the location where you have installed Firefox on your machine
  		
-		//driver = new FirefoxDriver(options);
+		driver = new FirefoxDriver(options);    	
     	
-    	//options.addArguments("disable-infobars");
-		driver = new RemoteWebDriver(new URL("http://192.168.137.1:4444/wd/hub"), new FirefoxOptions());
+		//driver = new RemoteWebDriver(new URL("http://192.168.137.1:4444/wd/hub"), new FirefoxOptions());
 		driver.get("http://localhost:8080/ahorcado/index.html");		
 		
 		
@@ -102,6 +101,6 @@ public class AhorcadoUITest {
 
     @After
     public void teardown() {
-        driver.close();
+        //driver.close();
     }
 }
